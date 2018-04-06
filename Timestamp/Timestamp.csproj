@@ -84,7 +84,7 @@
     <MakeDir Directories="$(SolutionDir)NuGetBuild" />
     <Copy SourceFiles="$(OutputPath)\Timestamp.dll" DestinationFolder="$(SolutionDir)NuGetBuild" />
     <Copy SourceFiles="$(OutputPath)\Timestamp.pdb" DestinationFolder="$(SolutionDir)NuGetBuild" />
-    <Copy SourceFiles="$(ProjectDir)NugetAssets\Timestamp.targets" DestinationFolder="$(SolutionDir)NuGetBuild\Build" />
+    <Copy SourceFiles="$(ProjectDir)NugetAssets\Timestamp.targets" DestinationFiles="$(SolutionDir)NuGetBuild\Build\BuildTimestamp.targets" />
     <Copy SourceFiles="$(ProjectDir)NugetAssets\Timestamp.nuspec" DestinationFolder="$(SolutionDir)NuGetBuild" />
     <PepitaPackage.CreatePackageTask NuGetBuildDirectory="$(SolutionDir)NuGetBuild" MetadataAssembly="$(OutputPath)Timestamp.dll" />
   </Target>
